@@ -48,6 +48,16 @@
                 <h2 class="visit-title">February 2026 Visit</h2>
                 <p class="visit-date">Our latest adventure in Pescara</p>
 
+                <!-- Upload Button -->
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <input type="file" id="feb2026-upload" accept="image/jpeg,image/jpg,image/png,image/gif,image/heic,image/heif,.heic,.heif" style="display: none;">
+                    <button onclick="document.getElementById('feb2026-upload').click()" class="upload-btn">
+                        📤 Upload Photo
+                    </button>
+                    <p id="feb2026-upload-status" style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">Supports JPEG, PNG, GIF, and HEIC</p>
+                </div>
+
                 <!-- Carousel Container -->
                 <div class="carousel-container">
                     <div class="carousel-wrapper">
@@ -110,16 +120,46 @@
             <div class="container">
                 <h2 class="visit-title">October 2025 Visit</h2>
                 <p class="visit-date">Autumn in Abruzzo</p>
-                <div class="photo-grid">
-                    <!-- Photos will be added here -->
-                    <!-- Example:
-                    <div class="photo-item">
-                        <img src="../images/gallery/2025-10/photo1.jpg" alt="Description" loading="lazy">
+
+                <!-- Upload Button -->
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <input type="file" id="oct2025-upload" accept="image/jpeg,image/jpg,image/png,image/gif,image/heic,image/heif,.heic,.heif" style="display: none;">
+                    <button onclick="document.getElementById('oct2025-upload').click()" class="upload-btn">
+                        📤 Upload Photo
+                    </button>
+                    <p id="oct2025-upload-status" style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">Supports JPEG, PNG, GIF, and HEIC</p>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="carousel-container" id="oct2025-carousel-container" style="display: none;">
+                    <div class="carousel-wrapper">
+                        <!-- Previous Button -->
+                        <button class="carousel-btn prev-btn" onclick="changeSlide(-1, 'oct2025')" aria-label="Previous photo">
+                            &#10094;
+                        </button>
+
+                        <!-- Images -->
+                        <div class="carousel-slides" id="oct2025-slides">
+                            <!-- Photos will be dynamically added here -->
+                        </div>
+
+                        <!-- Next Button -->
+                        <button class="carousel-btn next-btn" onclick="changeSlide(1, 'oct2025')" aria-label="Next photo">
+                            &#10095;
+                        </button>
                     </div>
-                    -->
-                    <div class="placeholder-message">
-                        <p>📸 Photos coming soon! Upload your images to: <code>images/gallery/2025-10/</code></p>
-                    </div>
+
+                    <!-- Photo Counter -->
+                    <div class="photo-counter" id="oct2025-counter">0 / 0</div>
+
+                    <!-- Dot Indicators -->
+                    <div class="carousel-dots" id="oct2025-dots"></div>
+                </div>
+
+                <!-- Placeholder when no photos -->
+                <div class="placeholder-message" id="oct2025-placeholder">
+                    <p>📸 No photos yet. Click "Upload Photo" above to add your first image!</p>
                 </div>
             </div>
         </section>
@@ -129,16 +169,46 @@
             <div class="container">
                 <h2 class="visit-title">June 2025 Visit</h2>
                 <p class="visit-date">Summer at the start of our journey</p>
-                <div class="photo-grid">
-                    <!-- Photos will be added here -->
-                    <!-- Example:
-                    <div class="photo-item">
-                        <img src="../images/gallery/2025-06/photo1.jpg" alt="Description" loading="lazy">
+
+                <!-- Upload Button -->
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <input type="file" id="jun2025-upload" accept="image/jpeg,image/jpg,image/png,image/gif,image/heic,image/heif,.heic,.heif" style="display: none;">
+                    <button onclick="document.getElementById('jun2025-upload').click()" class="upload-btn">
+                        📤 Upload Photo
+                    </button>
+                    <p id="jun2025-upload-status" style="margin-top: 0.5rem; color: #666; font-size: 0.9rem;"></p>
+                    <p style="font-size: 0.85rem; color: #999; margin-top: 0.5rem;">Supports JPEG, PNG, GIF, and HEIC</p>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="carousel-container" id="jun2025-carousel-container" style="display: none;">
+                    <div class="carousel-wrapper">
+                        <!-- Previous Button -->
+                        <button class="carousel-btn prev-btn" onclick="changeSlide(-1, 'jun2025')" aria-label="Previous photo">
+                            &#10094;
+                        </button>
+
+                        <!-- Images -->
+                        <div class="carousel-slides" id="jun2025-slides">
+                            <!-- Photos will be dynamically added here -->
+                        </div>
+
+                        <!-- Next Button -->
+                        <button class="carousel-btn next-btn" onclick="changeSlide(1, 'jun2025')" aria-label="Next photo">
+                            &#10095;
+                        </button>
                     </div>
-                    -->
-                    <div class="placeholder-message">
-                        <p>📸 Photos coming soon! Upload your images to: <code>images/gallery/2025-06/</code></p>
-                    </div>
+
+                    <!-- Photo Counter -->
+                    <div class="photo-counter" id="jun2025-counter">0 / 0</div>
+
+                    <!-- Dot Indicators -->
+                    <div class="carousel-dots" id="jun2025-dots"></div>
+                </div>
+
+                <!-- Placeholder when no photos -->
+                <div class="placeholder-message" id="jun2025-placeholder">
+                    <p>📸 No photos yet. Click "Upload Photo" above to add your first image!</p>
                 </div>
             </div>
         </section>
@@ -331,6 +401,27 @@
             color: #2c5530;
         }
 
+        .upload-btn {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c4e 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(44, 85, 48, 0.3);
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(44, 85, 48, 0.4);
+        }
+
+        .upload-btn:active {
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             .page-hero h1 {
                 font-size: 2.2rem;
@@ -399,8 +490,13 @@
 
         // Carousel functionality
         let currentSlideIndex = {
-            'feb2026': 0
+            'feb2026': 0,
+            'oct2025': 0,
+            'jun2025': 0
         };
+
+        // API Gateway endpoint for image upload
+        const UPLOAD_API_ENDPOINT = 'https://sktkk4pr57.execute-api.us-west-2.amazonaws.com/prod/upload';
 
         function changeSlide(direction, carouselId) {
             const slides = document.querySelectorAll(`#${carouselId}-slides .carousel-slide`);
@@ -447,33 +543,106 @@
             });
         }
 
+        // Generic upload handler function
+        function handleUpload(uploadId, statusId, galleryFolder) {
+            return async function(e) {
+                const file = e.target.files[0];
+                if (!file) return;
+
+                const statusElement = document.getElementById(statusId);
+                statusElement.textContent = 'Uploading...';
+                statusElement.style.color = '#2c5530';
+
+                try {
+                    // Read file as base64
+                    const reader = new FileReader();
+                    reader.onload = async function(event) {
+                        const base64Data = event.target.result.split(',')[1];
+
+                        // Send to Lambda via API Gateway
+                        const response = await fetch(UPLOAD_API_ENDPOINT, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                file: base64Data,
+                                fileName: file.name,
+                                galleryFolder: galleryFolder
+                            })
+                        });
+
+                        if (response.ok) {
+                            const result = await response.json();
+                            statusElement.textContent = '✓ Upload successful! Refreshing page...';
+                            statusElement.style.color = '#2c5530';
+
+                            // Reload page after 1 second to show new image
+                            setTimeout(() => {
+                                window.location.reload();
+                            }, 1000);
+                        } else {
+                            const error = await response.json();
+                            throw new Error(error.error || 'Upload failed');
+                        }
+                    };
+                    reader.readAsDataURL(file);
+
+                } catch (error) {
+                    statusElement.textContent = `✗ ${error.message}`;
+                    statusElement.style.color = '#d32f2f';
+                    console.error('Upload error:', error);
+                }
+
+                // Reset file input
+                e.target.value = '';
+            };
+        }
+
+        // Attach upload handlers for each section
+        document.getElementById('feb2026-upload')?.addEventListener('change', handleUpload('feb2026-upload', 'feb2026-upload-status', '2026-02'));
+        document.getElementById('oct2025-upload')?.addEventListener('change', handleUpload('oct2025-upload', 'oct2025-upload-status', '2025-10'));
+        document.getElementById('jun2025-upload')?.addEventListener('change', handleUpload('jun2025-upload', 'jun2025-upload-status', '2025-06'));
+
         // Initialize carousels when page loads
         document.addEventListener('DOMContentLoaded', function() {
-            const carousels = ['feb2026'];
+            const carousels = ['feb2026', 'oct2025', 'jun2025'];
 
             carousels.forEach(carouselId => {
                 const slides = document.querySelectorAll(`#${carouselId}-slides .carousel-slide`);
                 const dotsContainer = document.getElementById(`${carouselId}-dots`);
+                const carouselContainer = document.getElementById(`${carouselId}-carousel-container`);
+                const placeholder = document.getElementById(`${carouselId}-placeholder`);
 
-                // Create dots
-                if (dotsContainer && slides.length > 0) {
-                    slides.forEach((_, index) => {
-                        const dot = document.createElement('span');
-                        dot.className = 'dot';
-                        if (index === 0) dot.classList.add('active');
-                        dot.onclick = () => showSlide(carouselId, index);
-                        dotsContainer.appendChild(dot);
-                    });
+                // Show or hide carousel based on whether there are slides
+                if (slides.length > 0) {
+                    if (carouselContainer) carouselContainer.style.display = 'block';
+                    if (placeholder) placeholder.style.display = 'none';
+
+                    // Create dots
+                    if (dotsContainer) {
+                        slides.forEach((_, index) => {
+                            const dot = document.createElement('span');
+                            dot.className = 'dot';
+                            if (index === 0) dot.classList.add('active');
+                            dot.onclick = () => showSlide(carouselId, index);
+                            dotsContainer.appendChild(dot);
+                        });
+                    }
+
+                    // Initialize first slide
+                    currentSlideIndex[carouselId] = 0;
+                    showSlide(carouselId);
+                } else {
+                    if (carouselContainer) carouselContainer.style.display = 'none';
+                    if (placeholder) placeholder.style.display = 'block';
                 }
-
-                // Initialize first slide
-                currentSlideIndex[carouselId] = 0;
-                showSlide(carouselId);
             });
 
-            // Keyboard navigation
+            // Keyboard navigation (for currently focused carousel)
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'ArrowLeft') {
+                    // Navigate the first visible carousel
                     changeSlide(-1, 'feb2026');
                 } else if (e.key === 'ArrowRight') {
                     changeSlide(1, 'feb2026');
