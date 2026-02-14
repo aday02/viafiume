@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery | Via Fiume</title>
+    <meta name="description" content="Photos from our visits to Via Fiume in Pescara, Italy.">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title"><a href="../index.html" style="text-decoration: none; color: inherit;">Via Fiume</a></h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#apartment">Our Apartment</a></li>
+                <li><a href="./getting-here.html">Getting Here</a></li>
+                <li><a href="./restaurants.html">Local Dining</a></li>
+                <li><a href="./things-to-do.html">Exploring Pescara</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./availability.html">Availability</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 100px;">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Photo Gallery</h1>
+                <p class="page-subtitle">Memories from our visits to Via Fiume</p>
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <div class="container">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+                        Follow our journey through Pescara and Abruzzo. Each visit brings new adventures, favorite restaurants, and unforgettable moments in our Italian home away from home.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- February 2026 Visit -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="visit-title">February 2026 Visit</h2>
+                <p class="visit-date">Our latest adventure in Pescara</p>
+
+                <!-- Carousel Container -->
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <!-- Previous Button -->
+                        <button class="carousel-btn prev-btn" onclick="changeSlide(-1, 'feb2026')" aria-label="Previous photo">
+                            &#10094;
+                        </button>
+
+                        <!-- Images -->
+                        <div class="carousel-slides" id="feb2026-slides">
+                            <div class="carousel-slide active">
+                                <img src="../images/gallery/2026-02/20260213_174202281_iOS.jpg" alt="Pescara - February 13, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260213_181912757_iOS.jpg" alt="Pescara - February 13, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_100841959_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_102731681_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_102745720_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_103825613_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_110409568_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_111023874_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_114414979_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260214_114540418_iOS.jpg" alt="Pescara - February 14, 2026">
+                            </div>
+                        </div>
+
+                        <!-- Next Button -->
+                        <button class="carousel-btn next-btn" onclick="changeSlide(1, 'feb2026')" aria-label="Next photo">
+                            &#10095;
+                        </button>
+                    </div>
+
+                    <!-- Photo Counter -->
+                    <div class="photo-counter" id="feb2026-counter">1 / 10</div>
+
+                    <!-- Dot Indicators -->
+                    <div class="carousel-dots" id="feb2026-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- October 2025 Visit -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="visit-title">October 2025 Visit</h2>
+                <p class="visit-date">Autumn in Abruzzo</p>
+                <div class="photo-grid">
+                    <!-- Photos will be added here -->
+                    <!-- Example:
+                    <div class="photo-item">
+                        <img src="../images/gallery/2025-10/photo1.jpg" alt="Description" loading="lazy">
+                    </div>
+                    -->
+                    <div class="placeholder-message">
+                        <p>📸 Photos coming soon! Upload your images to: <code>images/gallery/2025-10/</code></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- June 2025 Visit -->
+        <section class="gallery-section">
+            <div class="container">
+                <h2 class="visit-title">June 2025 Visit</h2>
+                <p class="visit-date">Summer at the start of our journey</p>
+                <div class="photo-grid">
+                    <!-- Photos will be added here -->
+                    <!-- Example:
+                    <div class="photo-item">
+                        <img src="../images/gallery/2025-06/photo1.jpg" alt="Description" loading="lazy">
+                    </div>
+                    -->
+                    <div class="placeholder-message">
+                        <p>📸 Photos coming soon! Upload your images to: <code>images/gallery/2025-06/</code></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Via Fiume. Living la dolce vita in Pescara, Italy.</p>
+                <p>Contact: <a href="mailto:hello@viafiume.com">hello@viafiume.com</a></p>
+            </div>
+        </footer>
+    </main>
+
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #2c5530 0%, #1a3a1e 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .intro-section {
+            padding: 4rem 0;
+        }
+
+        .gallery-section {
+            padding: 3rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .gallery-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .visit-title {
+            text-align: center;
+            color: #2c5530;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .visit-date {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .carousel-slides {
+            position: relative;
+            width: 100%;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Navigation Buttons */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c5530;
+            border: none;
+            padding: 1rem 1.2rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: background 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+
+        .prev-btn {
+            left: 1rem;
+        }
+
+        .next-btn {
+            right: 1rem;
+        }
+
+        /* Photo Counter */
+        .photo-counter {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Dot Indicators */
+        .carousel-dots {
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.5rem;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background: #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: #2c5530;
+        }
+
+        .dot:hover {
+            background: #4a7c4e;
+        }
+
+        .placeholder-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border: 2px dashed #ddd;
+        }
+
+        .placeholder-message p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .placeholder-message code {
+            background: #fff;
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-family: 'Courier New', monospace;
+            color: #2c5530;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .visit-title {
+                font-size: 1.8rem;
+            }
+
+            .carousel-slides {
+                min-height: 250px;
+            }
+
+            .carousel-slide img {
+                max-height: 350px;
+            }
+
+            .carousel-btn {
+                padding: 0.8rem 1rem;
+                font-size: 1.2rem;
+            }
+
+            .prev-btn {
+                left: 0.5rem;
+            }
+
+            .next-btn {
+                right: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-btn {
+                padding: 0.6rem 0.8rem;
+                font-size: 1rem;
+            }
+
+            .carousel-slides {
+                min-height: 200px;
+            }
+
+            .carousel-slide img {
+                max-height: 300px;
+            }
+        }
+    </style>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', function(e) {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const menuLinks = navMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+
+        // Carousel functionality
+        let currentSlideIndex = {
+            'feb2026': 0
+        };
+
+        function changeSlide(direction, carouselId) {
+            const slides = document.querySelectorAll(`#${carouselId}-slides .carousel-slide`);
+            currentSlideIndex[carouselId] += direction;
+
+            // Loop around
+            if (currentSlideIndex[carouselId] >= slides.length) {
+                currentSlideIndex[carouselId] = 0;
+            }
+            if (currentSlideIndex[carouselId] < 0) {
+                currentSlideIndex[carouselId] = slides.length - 1;
+            }
+
+            showSlide(carouselId);
+        }
+
+        function showSlide(carouselId, index = null) {
+            const slides = document.querySelectorAll(`#${carouselId}-slides .carousel-slide`);
+            const counter = document.getElementById(`${carouselId}-counter`);
+            const dots = document.querySelectorAll(`#${carouselId}-dots .dot`);
+
+            if (index !== null) {
+                currentSlideIndex[carouselId] = index;
+            }
+
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+
+            // Show current slide
+            slides[currentSlideIndex[carouselId]].classList.add('active');
+
+            // Update counter
+            if (counter) {
+                counter.textContent = `${currentSlideIndex[carouselId] + 1} / ${slides.length}`;
+            }
+
+            // Update dots
+            dots.forEach((dot, idx) => {
+                if (idx === currentSlideIndex[carouselId]) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        // Initialize carousels when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousels = ['feb2026'];
+
+            carousels.forEach(carouselId => {
+                const slides = document.querySelectorAll(`#${carouselId}-slides .carousel-slide`);
+                const dotsContainer = document.getElementById(`${carouselId}-dots`);
+
+                // Create dots
+                if (dotsContainer && slides.length > 0) {
+                    slides.forEach((_, index) => {
+                        const dot = document.createElement('span');
+                        dot.className = 'dot';
+                        if (index === 0) dot.classList.add('active');
+                        dot.onclick = () => showSlide(carouselId, index);
+                        dotsContainer.appendChild(dot);
+                    });
+                }
+
+                // Initialize first slide
+                currentSlideIndex[carouselId] = 0;
+                showSlide(carouselId);
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    changeSlide(-1, 'feb2026');
+                } else if (e.key === 'ArrowRight') {
+                    changeSlide(1, 'feb2026');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
