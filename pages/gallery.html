@@ -98,6 +98,10 @@
                             <div class="carousel-slide">
                                 <img src="../images/gallery/2026-02/20260214_114540418_iOS.jpg" alt="Pescara - February 14, 2026">
                             </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2026-02/20260215T155853_IMG_1709.jpg" alt="Pescara - February 2026">
+                            </div>
+                        
                         </div>
 
                         <!-- Next Button -->
@@ -107,7 +111,7 @@
                     </div>
 
                     <!-- Photo Counter -->
-                    <div class="photo-counter" id="feb2026-counter">1 / 10</div>
+                    <div class="photo-counter" id="feb2026-counter">1 / 11</div>
 
                     <!-- Dot Indicators -->
                     <div class="carousel-dots" id="feb2026-dots"></div>
@@ -142,6 +146,18 @@
                         <!-- Images -->
                         <div class="carousel-slides" id="oct2025-slides">
                             <!-- Photos will be dynamically added here -->
+                        
+                            <div class="carousel-slide active">
+                                <img src="../images/gallery/2025-10/20260214T153952_0E8E5BB0-B753-473C-AD3C-C1DC73377562.jpg" alt="Pescara - October 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-10/20260214T154016_IMG_9466.jpg" alt="Pescara - October 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-10/20260214T154638_IMG_9485.jpg" alt="Pescara - October 2025">
+                            </div>
+                        
+                        
                         </div>
 
                         <!-- Next Button -->
@@ -151,7 +167,7 @@
                     </div>
 
                     <!-- Photo Counter -->
-                    <div class="photo-counter" id="oct2025-counter">0 / 0</div>
+                    <div class="photo-counter" id="oct2025-counter">1 / 3</div>
 
                     <!-- Dot Indicators -->
                     <div class="carousel-dots" id="oct2025-dots"></div>
@@ -191,6 +207,70 @@
                         <!-- Images -->
                         <div class="carousel-slides" id="jun2025-slides">
                             <!-- Photos will be dynamically added here -->
+                        
+                            <div class="carousel-slide active">
+                                <img src="../images/gallery/2025-06/20260214T154045_IMG_7386.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154112_IMG_7385.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154155_IMG_7857.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154222_IMG_7796.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154246_IMG_7986.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154306_IMG_7389.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154347_IMG_7512.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154436_IMG_7740.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154516_IMG_7989.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154539_IMG_8051.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154619_IMG_8261.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154716_IMG_8264.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154741_IMG_7764.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154805_IMG_7772.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154836_IMG_7772.jpg" alt="Pescara - June 2025">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="../images/gallery/2025-06/20260214T154856_IMG_7407.jpg" alt="Pescara - June 2025">
+                            </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         </div>
 
                         <!-- Next Button -->
@@ -200,7 +280,7 @@
                     </div>
 
                     <!-- Photo Counter -->
-                    <div class="photo-counter" id="jun2025-counter">0 / 0</div>
+                    <div class="photo-counter" id="jun2025-counter">1 / 16</div>
 
                     <!-- Dot Indicators -->
                     <div class="carousel-dots" id="jun2025-dots"></div>
@@ -543,6 +623,42 @@
             });
         }
 
+        // Compress image client-side using canvas (max 2000px, JPEG quality 0.8)
+        function compressImage(file, maxDimension, quality) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                const url = URL.createObjectURL(file);
+                img.onload = function() {
+                    URL.revokeObjectURL(url);
+                    let width = img.width;
+                    let height = img.height;
+
+                    // Scale down if larger than maxDimension
+                    if (width > maxDimension || height > maxDimension) {
+                        if (width > height) {
+                            height = Math.round(height * maxDimension / width);
+                            width = maxDimension;
+                        } else {
+                            width = Math.round(width * maxDimension / height);
+                            height = maxDimension;
+                        }
+                    }
+
+                    const canvas = document.createElement('canvas');
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+
+                    // Export as JPEG
+                    const dataUrl = canvas.toDataURL('image/jpeg', quality);
+                    resolve(dataUrl.split(',')[1]);
+                };
+                img.onerror = reject;
+                img.src = url;
+            });
+        }
+
         // Generic upload handler function
         function handleUpload(uploadId, statusId, galleryFolder) {
             return async function(e) {
@@ -550,43 +666,44 @@
                 if (!file) return;
 
                 const statusElement = document.getElementById(statusId);
-                statusElement.textContent = 'Uploading...';
+                statusElement.textContent = 'Compressing image...';
                 statusElement.style.color = '#2c5530';
 
                 try {
-                    // Read file as base64
-                    const reader = new FileReader();
-                    reader.onload = async function(event) {
-                        const base64Data = event.target.result.split(',')[1];
+                    // Compress image client-side (max 2000px wide, 80% JPEG quality)
+                    const base64Data = await compressImage(file, 2000, 0.8);
 
-                        // Send to Lambda via API Gateway
-                        const response = await fetch(UPLOAD_API_ENDPOINT, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                file: base64Data,
-                                fileName: file.name,
-                                galleryFolder: galleryFolder
-                            })
-                        });
+                    statusElement.textContent = 'Uploading...';
 
-                        if (response.ok) {
-                            const result = await response.json();
-                            statusElement.textContent = '✓ Upload successful! Refreshing page...';
-                            statusElement.style.color = '#2c5530';
+                    // Always send as .jpg since we compressed to JPEG
+                    const fileName = file.name.replace(/\.[^.]+$/, '.jpg');
 
-                            // Reload page after 1 second to show new image
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 1000);
-                        } else {
-                            const error = await response.json();
-                            throw new Error(error.error || 'Upload failed');
-                        }
-                    };
-                    reader.readAsDataURL(file);
+                    // Send to Lambda via API Gateway
+                    const response = await fetch(UPLOAD_API_ENDPOINT, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            file: base64Data,
+                            fileName: fileName,
+                            galleryFolder: galleryFolder
+                        })
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        statusElement.textContent = '✓ Upload successful! Refreshing page...';
+                        statusElement.style.color = '#2c5530';
+
+                        // Reload page after 1 second to show new image
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 1000);
+                    } else {
+                        const error = await response.json();
+                        throw new Error(error.error || 'Upload failed');
+                    }
 
                 } catch (error) {
                     statusElement.textContent = `✗ ${error.message}`;

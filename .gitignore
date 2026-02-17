@@ -11,3 +11,10 @@ desktop.ini
 *.swp
 *.swo
 *~
+
+# Gallery photos (stored in S3 only)
+images/gallery/
+
+# Local settings
+.claude/settings.local.json
+lambda/gallery-upload/trust-policy.json
