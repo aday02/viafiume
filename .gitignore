@@ -15,6 +15,9 @@ desktop.ini
 # Gallery photos (stored in S3 only)
 images/gallery/
 
+# Encryption helper (not for deployment)
+encrypt-content.html
+
 # Local settings
 .claude/settings.local.json
 lambda/gallery-upload/trust-policy.json

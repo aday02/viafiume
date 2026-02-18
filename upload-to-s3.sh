@@ -10,8 +10,8 @@ aws s3 sync . s3://viafiume.com \
   --exclude ".claude/*" \
   --exclude "node_modules/*" \
   --exclude "lambda/*" \
+  --exclude "encrypt-content.html" \
   --exclude "images/gallery/*" \
-  --delete \
   --profile viafiume
 
 echo "Invalidating CloudFront cache..."

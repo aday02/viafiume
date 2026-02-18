@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Access | Via Fiume Apartment</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .pin-section {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pin-card {
+            background: white;
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .pin-card h2 {
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .pin-card p {
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .pin-input-group {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .pin-input {
+            width: 100%;
+            max-width: 280px;
+            padding: 1rem;
+            font-size: 1.4rem;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-family: 'Georgia', serif;
+            letter-spacing: 0.3rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .pin-input:focus {
+            outline: none;
+            border-color: #2c5530;
+        }
+
+        .pin-input.error {
+            border-color: #c0392b;
+            animation: shake 0.4s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+
+        .pin-submit {
+            display: inline-block;
+            padding: 0.9rem 2.5rem;
+            background: #2c5530;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-family: 'Georgia', serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .pin-submit:hover {
+            background: #1e3f22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .pin-error-msg {
+            color: #c0392b;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            min-height: 1.4rem;
+        }
+
+        /* Protected content area */
+        .protected-content {
+            display: none;
+        }
+
+        .protected-content .container {
+            max-width: 900px;
+        }
+
+        .key-instructions {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .key-instructions h2 {
+            color: #2c5530;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .key-instructions h3 {
+            color: #2c5530;
+            margin: 2rem 0 1rem;
+            font-size: 1.3rem;
+        }
+
+        .key-instructions p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .key-instructions ol, .key-instructions ul {
+            color: #555;
+            line-height: 1.8;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .key-instructions li {
+            margin-bottom: 0.5rem;
+        }
+
+        .key-photo {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 1.5rem auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid #2c5530;
+        }
+
+        .key-photo-caption {
+            text-align: center;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .important-note {
+            background: linear-gradient(135deg, #fff8e1, #fff3cd);
+            border-left: 4px solid #f0ad4e;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .important-note p {
+            color: #856404;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .pin-card {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .key-instructions {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title"><a href="../index.html" style="text-decoration: none; color: inherit;">Via Fiume</a></h1>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#apartment">Our Apartment</a></li>
+                <li><a href="./getting-here.html">Getting Here</a></li>
+                <li><a href="./restaurants.html">Local Dining</a></li>
+                <li><a href="./things-to-do.html">Exploring Pescara</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./availability.html">Availability</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main style="margin-top: 100px;">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Guest Access</h1>
+                <p class="page-subtitle">Key pickup instructions for our guests</p>
+            </div>
+        </section>
+
+        <!-- PIN Entry -->
+        <section class="pin-section" id="pinSection">
+            <div class="pin-card">
+                <h2>Enter Access Code</h2>
+                <p>Please enter the code provided by your host to view key pickup instructions.</p>
+                <form id="pinForm" onsubmit="return false;">
+                    <input type="password" id="pinInput" class="pin-input" placeholder="Enter code" autocomplete="off" autofocus>
+                    <br><br>
+                    <button type="submit" class="pin-submit" id="pinSubmit">Unlock</button>
+                </form>
+                <p class="pin-error-msg" id="pinError"></p>
+            </div>
+        </section>
+
+        <!-- Protected Content (decrypted and injected by JS) -->
+        <section class="protected-content" id="protectedContent">
+            <div class="container">
+                <div id="decryptedContent"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Via Fiume, 15 &bull; Pescara, Italy</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => navMenu.classList.remove('active'));
+        });
+
+        // --- Crypto helpers ---
+        async function deriveKey(password, salt) {
+            const enc = new TextEncoder();
+            const keyMaterial = await crypto.subtle.importKey(
+                'raw', enc.encode(password), 'PBKDF2', false, ['deriveKey']
+            );
+            return crypto.subtle.deriveKey(
+                { name: 'PBKDF2', salt: salt, iterations: 100000, hash: 'SHA-256' },
+                keyMaterial,
+                { name: 'AES-GCM', length: 256 },
+                false,
+                ['decrypt']
+            );
+        }
+
+        async function decryptContent(encryptedBase64, password) {
+            const encryptedBytes = Uint8Array.from(atob(encryptedBase64), c => c.charCodeAt(0));
+            const salt = encryptedBytes.slice(0, 16);
+            const iv = encryptedBytes.slice(16, 28);
+            const ciphertext = encryptedBytes.slice(28);
+            const key = await deriveKey(password, salt);
+            const decrypted = await crypto.subtle.decrypt(
+                { name: 'AES-GCM', iv: iv },
+                key,
+                ciphertext
+            );
+            return new TextDecoder().decode(decrypted);
+        }
+
+        // --- Encrypted content placeholder ---
+        // Replace this string with the output from encrypt-content.html
+        const ENCRYPTED_CONTENT = '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';
+
+        // --- PIN form logic ---
+        const pinForm = document.getElementById('pinForm');
+        const pinInput = document.getElementById('pinInput');
+        const pinError = document.getElementById('pinError');
+
+        pinForm.addEventListener('submit', async function() {
+            const pin = pinInput.value.trim();
+            if (!pin) return;
+
+            pinError.textContent = '';
+            pinInput.classList.remove('error');
+
+            if (ENCRYPTED_CONTENT === 'PASTE_ENCRYPTED_CONTENT_HERE') {
+                pinError.textContent = 'Content has not been configured yet.';
+                return;
+            }
+
+            try {
+                const html = await decryptContent(ENCRYPTED_CONTENT, pin);
+                document.getElementById('decryptedContent').innerHTML = html;
+                document.getElementById('pinSection').style.display = 'none';
+                document.getElementById('protectedContent').style.display = 'block';
+            } catch (e) {
+                pinInput.classList.add('error');
+                pinError.textContent = 'Incorrect code. Please try again.';
+                setTimeout(() => pinInput.classList.remove('error'), 400);
+            }
+        });
+    </script>
+</body>
+</html>
